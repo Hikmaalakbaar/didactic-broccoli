@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pencatatan Bendahara</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Pencatatan Bendahara</h1>
+        <div class="menu">
+            <button onclick="showForm()">Tambah Pembayaran</button>
+            <button onclick="showPayments()">Tampilkan Pembayaran</button>
+        </div>
+        <div id="form" class="hidden">
+            <h2>Tambah Pembayaran</h2>
+            <input type="text" id="name" placeholder="Nama Santri">
+            <input type="text" id="class" placeholder="Kelas Santri">
+            <input type="text" id="type" placeholder="Jenis Pembayaran">
+            <input type="text" id="description" placeholder="Keterangan Pembayaran">
+            <input type="number" id="amount" placeholder="Nominal Pembayaran">
+            <button onclick="addPayment()">Tambah</button>
+        </div>
+        <div id="payments" class="hidden">
+            <h2>Daftar Pembayaran</h2>
+            <table id="paymentsTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Santri</th>
+                        <th>Kelas</th>
+                        <th>Jenis</th>
+                        <th>Keterangan</th>
+                        <th>Nominal</th>
+                        <th>Waktu Input</th>
+                    </tr>
+                </thead>
+                <tbody id="paymentsBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
